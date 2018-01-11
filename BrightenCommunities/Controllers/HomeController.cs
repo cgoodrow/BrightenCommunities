@@ -17,6 +17,24 @@ namespace BrightenCommunities.Controllers
             return PartialView(db.Blogs.ToList());
         }
 
+        public ActionResult _BlogCreatePartial()
+        {
+            return View(); 
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult _BlogCreatePartial([Bind(Include = "Id,UserName,Post")] Blogs blogs)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Blogs.Add(blogs);
+                db.SaveChanges();
+                return View();
+            }
+
+            return View(blogs);           
+        }
 
         public ActionResult Index()
         {            
