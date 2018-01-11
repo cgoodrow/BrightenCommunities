@@ -333,7 +333,6 @@
     <Content Include="Views\Blogs\Details.cshtml" />
     <Content Include="Views\Blogs\Edit.cshtml" />
     <Content Include="Views\Blogs\Index.cshtml" />
-    <Content Include="Views\Shared\_BlogCreate.cshtml" />
     <Content Include="Views\Shared\_BlogPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
