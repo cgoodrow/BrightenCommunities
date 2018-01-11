@@ -12,6 +12,12 @@ namespace BrightenCommunities.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult _BlogPartial()
+        {
+            return PartialView(db.Blogs.ToList());
+        }
+
+
         public ActionResult Index()
         {            
             return View();

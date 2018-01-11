@@ -1,4 +1,4 @@
-﻿
+﻿@model BrightenCommunities.Models.Blogs
 @{
     ViewBag.Title = "Home Page";
 }
@@ -32,6 +32,7 @@
 </div>
 <div class="row">
     <div class="col-lg-10">
-        @Html.Partial("_BlogCreate")   
+        @Html.Partial("_BlogCreate")
+        @Html.Action("_BlogPartial")
     </div>
 </div>
