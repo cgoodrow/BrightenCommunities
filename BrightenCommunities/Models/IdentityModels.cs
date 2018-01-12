@@ -31,5 +31,7 @@ namespace BrightenCommunities.Models
         }
 
         public System.Data.Entity.DbSet<BrightenCommunities.Models.Blogs> Blogs { get; set; }
+
+        public System.Data.Entity.DbSet<BrightenCommunities.Models.Volunteers> Volunteers { get; set; }
     }
 }
