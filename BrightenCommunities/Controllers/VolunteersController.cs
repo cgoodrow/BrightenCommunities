@@ -27,12 +27,12 @@ namespace BrightenCommunities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Volunteer volunteer = db.Volunteers.Find(id);
-            if (volunteer == null)
+            Volunteers volunteers = db.Volunteers.Find(id);
+            if (volunteers == null)
             {
                 return HttpNotFound();
             }
-            return View(volunteer);
+            return View(volunteers);
         }
 
         // GET: Volunteers/Create
@@ -46,16 +46,17 @@ namespace BrightenCommunities.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Email,Phone")] Volunteer volunteer)
+        public ActionResult Create([Bind(Include = "Id,Name,Email,Phone")] Volunteers volunteers)
         {
             if (ModelState.IsValid)
             {
-                db.Volunteers.Add(volunteer);
+                db.Volunteers.Add(volunteers);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                ViewBag.Message = "Thank you for your interest in volunteering to help.  We will notify you on our next cleanup event.  Feel free to help out on you own, everything helps.";
+                return RedirectToAction("../Home/Index");
             }
 
-            return View(volunteer);
+            return View(volunteers);
         }
 
         // GET: Volunteers/Edit/5
@@ -65,12 +66,12 @@ namespace BrightenCommunities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Volunteer volunteer = db.Volunteers.Find(id);
-            if (volunteer == null)
+            Volunteers volunteers = db.Volunteers.Find(id);
+            if (volunteers == null)
             {
                 return HttpNotFound();
             }
-            return View(volunteer);
+            return View(volunteers);
         }
 
         // POST: Volunteers/Edit/5
@@ -78,15 +79,15 @@ namespace BrightenCommunities.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Email,Phone")] Volunteer volunteer)
+        public ActionResult Edit([Bind(Include = "Id,Name,Email,Phone")] Volunteers volunteers)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(volunteer).State = EntityState.Modified;
+                db.Entry(volunteers).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(volunteer);
+            return View(volunteers);
         }
 
         // GET: Volunteers/Delete/5
@@ -96,12 +97,12 @@ namespace BrightenCommunities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Volunteer volunteer = db.Volunteers.Find(id);
-            if (volunteer == null)
+            Volunteers volunteers = db.Volunteers.Find(id);
+            if (volunteers == null)
             {
                 return HttpNotFound();
             }
-            return View(volunteer);
+            return View(volunteers);
         }
 
         // POST: Volunteers/Delete/5
@@ -109,8 +110,8 @@ namespace BrightenCommunities.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Volunteer volunteer = db.Volunteers.Find(id);
-            db.Volunteers.Remove(volunteer);
+            Volunteers volunteers = db.Volunteers.Find(id);
+            db.Volunteers.Remove(volunteers);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace BrightenCommunities.Models
 {
-    public class Volunteer
+    public class Volunteers
     {
         public int Id { get; set; }
         public string Name { get; set; }
