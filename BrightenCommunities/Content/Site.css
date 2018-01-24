@@ -1,24 +1,71 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
+﻿@font-face {
+  font-family: 'permanent_markerregular';
+  src: url("fonts/permanentmarker-regular-webfont.woff2") format("woff2"), url("fonts/permanentmarker-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+#header .banner {
+  position: relative;
+  background-image: url("images/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px; }
+
+#header .banner-text {
+  position: absolute;
+  top: 0;
+  right: 3%; }
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    #header .banner-text {
+      right: 13%; } }
+  @media (max-width: 480px) {
+    #header .banner-text {
+      right: 0; } }
+  #header .banner-text h1 {
+    font-size: 72px;
+    font-family: "permanent_markerregular", cursive; }
+    @media (max-width: 480px) {
+      #header .banner-text h1 {
+        font-size: 13vw; } }
+    #header .banner-text h1 span {
+      padding-left: 45px; }
+  #header .banner-text h3 {
+    padding-left: 115px;
+    font-size: 45px;
+    font-family: "permanent_markerregular", cursive; }
+    @media (max-width: 480px) {
+      #header .banner-text h3 {
+        padding-left: 70px;
+        font-size: 11vw; } }
+    #header .banner-text h3 span {
+      padding-left: 65px; }
+
+@font-face {
+  font-family: 'permanent_markerregular';
+  src: url("fonts/permanentmarker-regular-webfont.woff2") format("woff2"), url("fonts/permanentmarker-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: red; }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+  padding-left: 15px;
+  padding-right: 15px; }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
-}
+  white-space: normal; }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
-}
+  max-width: 280px; }
+
