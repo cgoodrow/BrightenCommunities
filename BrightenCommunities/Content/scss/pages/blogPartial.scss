@@ -1,0 +1,17 @@
+﻿@import "../globals.scss";
+
+    
+    .blog-label {
+        font-weight: $font-bold;
+        color:#000;
+        border-top: none;
+        margin-bottom: 25px;
+    }
+
+.blog {
+
+    div {
+        border-top: solid #ccc 1px;
+        padding: 25px 0;
+    }
+}

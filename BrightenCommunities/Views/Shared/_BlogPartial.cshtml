@@ -1,26 +1,26 @@
 ﻿@model IEnumerable<BrightenCommunities.Models.Blogs>
-    @{ Layout = null; }
+@{ Layout = null; }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Post)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Post)
-        </td>        
-    </tr>
-}
-
-</table>
+<div class="row">
+    <div class="col-lg-10 col-centered">
+        <div class="row">
+            <div class="col-xs-6 col-lg-6 blog-label">
+                @Html.DisplayNameFor(model => model.UserName)
+            </div>
+            <div class="col-xs-6 col-lg-6 blog-label">
+                @Html.DisplayNameFor(model => model.Post)
+            </div>
+        </div>
+        <div class="row blog">
+            @foreach (var item in Model)
+            {
+                <div class="col-xs-6 col-lg-6">
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </div>
+                <div class="col-xs-6 col-lg-6">
+                    @Html.DisplayFor(modelItem => item.Post)
+                </div>
+            }
+        </div>
+    </div>
+</div>

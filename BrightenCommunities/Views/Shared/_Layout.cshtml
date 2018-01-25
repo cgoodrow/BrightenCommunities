@@ -14,12 +14,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-       @RenderPage("~/Views/Shared/_Footer.cshtml")
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/nav.js")
-    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/Scripts/Scripts.js")
+    @RenderSection("Scripts", required: false)
 </body>
+@RenderPage("~/Views/Shared/_Footer.cshtml")
 </html>

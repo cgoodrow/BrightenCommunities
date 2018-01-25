@@ -281,6 +281,7 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\right_half_sun.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
@@ -302,14 +303,21 @@
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Content\Site.scss" />
-    <Content Include="Content\scss\_globals.scss" />
-    <Content Include="Content\scss\_header.scss" />
-    <Content Include="Content\scss\_settings.scss" />
+    <Content Include="Content\scss\globals.scss" />
+    <Content Include="Content\scss\header.scss" />
     <Content Include="Content\fonts\permanentmarker-regular-webfont.ttf" />
     <Content Include="Content\fonts\permanentmarker-regular-webfont.woff" />
     <Content Include="Content\fonts\permanentmarker-regular-webfont.woff2" />
-    <Content Include="Content\scss\_typography.scss" />
+    <Content Include="Content\scss\typography.scss" />
     <Content Include="Content\scss\nav.scss" />
+    <Content Include="Content\scss\footer.scss" />
+    <Content Include="Content\fonts\amaticsc-regular-webfont.woff" />
+    <Content Include="Content\fonts\amaticsc-regular-webfont.woff2" />
+    <Content Include="Content\scss\pages\home.scss" />
+    <Content Include="Content\scss\pages\settings.scss" />
+    <Content Include="Content\scss\pages\modal.scss" />
+    <Content Include="Content\scss\buttons.scss" />
+    <Content Include="Content\scss\pages\blogPartial.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -322,6 +330,7 @@
     <Content Include="Scripts\nav.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -379,9 +388,7 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />

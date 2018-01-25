@@ -1,4 +1,4 @@
-﻿@import "_typography.scss";
+﻿@import "typography.scss";
 
 #header {
     .banner {
@@ -11,6 +11,12 @@
         margin-top: -50px;
     }
 
+    .sun {
+        position: absolute;
+        left: -5%;
+        top: -35%;
+    }
+
     .banner-text {
         position: absolute;
         top: 0;
@@ -21,7 +27,8 @@
         }
    
         @media (max-width: 480px) {
-            right: 0;
+            right: -1.5%;
+            margin-top: 45px;
         }
 
         h1 {
