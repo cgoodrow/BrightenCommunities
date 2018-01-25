@@ -3,7 +3,6 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="body-content">
     <section class="the-vision">
         <div class="row">
             <div class="col-lg-10 col-centered">
@@ -13,7 +12,7 @@
         </div>
     </section>
 
-    <section class="offset-right-cherry-blossom">
+    <section class="container-fluid offset-right-cherry-blossom">
         <div class="row">
             <div class="col-lg-4 cherry-blossom">
                 <img src="~/Content/images/cherry-blossom.png" />
@@ -46,7 +45,7 @@
         </div>
     </section>
 
-    <section class="offset-left-tulip">
+    <section class="container offset-left-tulip">
         <div class="row">
             <div class="col-lg-4 tulip">
                 <img src="~/Content/images/tulips.png" />
@@ -64,16 +63,19 @@
             </div>
         </div>
     </section>
-    <div class="row">
+
+
+    <section class="row">
         <div class="col-lg-10 col-centered">
             @Html.Action("_BlogCreatePartial")
             @Html.Action("_BlogPartial")
             <!-- Button trigger modal -->
-            </div>
+        </div>
         <div class="col-xs-pull-1 col-lg-3 col-lg-push-1 m-top-25">
             <button type="button" class="btn btn-primary centerBlock" data-toggle="modal" data-target="#blogModal">
                 Create Blog
             </button>
-        </div>        
-    </div>
-</div>
+        </div>
+    </section>
+
+    
