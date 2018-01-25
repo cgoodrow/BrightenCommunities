@@ -1,0 +1,29 @@
+﻿.offset-right-cherry-blossom {
+    position: relative;
+
+    .cherry-blossom {
+        position: absolute;
+        right: -212px;
+        top: -190px;
+        z-index: -1;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+}
+
+.offset-left-tulip {
+    position: relative;
+
+    .tulip {
+        position: absolute;
+        left: -142px;
+        top: 0;
+        z-index: -1;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+}

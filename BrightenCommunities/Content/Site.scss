@@ -17,6 +17,7 @@ body {
     padding-right: 15px;
     font-family: $body-font;
     font-size:$body-font-size;
+    overflow: hidden;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

@@ -415,6 +415,28 @@ body::-webkit-scrollbar-thumb {
   border-top: solid #ccc 1px;
   padding: 25px 0; }
 
+.offset-right-cherry-blossom {
+  position: relative; }
+  .offset-right-cherry-blossom .cherry-blossom {
+    position: absolute;
+    right: -212px;
+    top: -190px;
+    z-index: -1; }
+    @media (max-width: 480px) {
+      .offset-right-cherry-blossom .cherry-blossom {
+        display: none; } }
+
+.offset-left-tulip {
+  position: relative; }
+  .offset-left-tulip .tulip {
+    position: absolute;
+    left: -142px;
+    top: 0;
+    z-index: -1; }
+    @media (max-width: 480px) {
+      .offset-left-tulip .tulip {
+        display: none; } }
+
 body {
   padding-top: 50px;
   padding-bottom: 20px; }
@@ -424,7 +446,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   font-family: "titilliumregular";
-  font-size: 18px; }
+  font-size: 18px;
+  overflow: hidden; }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
