@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<div id="header">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <button class="js-menu menu" type="button">
+                <span class="bar"></span>
+            </button>          
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (User.IsInRole("Administrator"))
+        {
+            <li>@Html.ActionLink("Administration", "Index", "Admin")</li>
+}
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="banner">
+            <div class="col-lg-5 sun">
+                <img src="~/Content/images/right_half_sun.png" />
+            </div>
+            <div class="col-lg-7 banner-text">
+                <h1>Brightening <br /><span>Communities</span></h1>
+                <h3>one day <br /><span>at a time.</span></h3>
+            </div>
+        </div>
+    </div>
+   </div>

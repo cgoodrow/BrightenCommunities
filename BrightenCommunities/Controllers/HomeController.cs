@@ -30,14 +30,17 @@ namespace BrightenCommunities.Controllers
             {
                 db.Blogs.Add(blogs);
                 db.SaveChanges();
+                ModelState.Clear(); //clears model state in form.
+                Response.Redirect(Request.Url.AbsolutePath); //redirects page to index page, prevents double submissions on page refresh.
+                
                 return View();
             }
-
+           
             return View(blogs);           
         }
 
         public ActionResult Index()
-        {            
+        {          
             return View();
         }
 

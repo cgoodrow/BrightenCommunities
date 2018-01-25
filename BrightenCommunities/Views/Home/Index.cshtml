@@ -3,40 +3,61 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="body-content">
+    <section class="the-vision">
+        <div class="row">
+            <div class="col-lg-10 col-centered">
+                <h2 class="text-center">the Vision</h2>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-10">
-        @Html.Action("_BlogCreatePartial")
-        @Html.Action("_BlogPartial")
-    </div>
+    <section class="cleaning">
+        <div class="row">
+            <div class="col-lg-10 col-centered pic-content">
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                    <img src="http://via.placeholder.com/300x300" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="col-lg-2">
-        @ViewBag.Message
+    <section class="the-mission">
+        <div class="row">
+            <div class="col-lg-10 col-centered">
+                <h3 class="text-center">the Mission</h3>
+                <p class="text-center">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-lg-10 col-centered">
+            @Html.Action("_BlogCreatePartial")
+            @Html.Action("_BlogPartial")
+            <!-- Button trigger modal -->
+            </div>
+        <div class="col-xs-pull-1 col-lg-3 col-lg-push-1 m-top-25">
+            <button type="button" class="btn btn-primary centerBlock" data-toggle="modal" data-target="#blogModal">
+                Create Blog
+            </button>
+        </div>        
     </div>
 </div>

@@ -1,0 +1,14 @@
+﻿@import "typography.scss";
+
+footer {
+    background-image: url('images/grass.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 175px;
+    font-family: $body-font; 
+
+    .offset-bottom {
+        bottom: -80%;
+    }
+}

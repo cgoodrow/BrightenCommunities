@@ -11,6 +11,7 @@ namespace BrightenCommunities.Models
     {   
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Name")]
         public string UserName { get; set; }
         public string Post { get; set; }
     }    
