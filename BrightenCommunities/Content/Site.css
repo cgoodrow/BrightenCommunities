@@ -423,9 +423,11 @@ body::-webkit-scrollbar-thumb {
   border-top: none;
   margin-bottom: 25px; }
 
-.blog div {
-  border-top: solid #ccc 1px;
-  padding: 25px 0; }
+.blog {
+  height: auto; }
+  .blog div {
+    border-top: solid #ccc 1px;
+    padding: 25px 0; }
 
 .offset-right-cherry-blossom {
   position: relative; }
