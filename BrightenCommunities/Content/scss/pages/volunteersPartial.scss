@@ -1,0 +1,31 @@
+﻿@import "../globals.scss";
+
+
+.volunteers-label {
+    font-weight: $font-bold;
+    color: #000;
+    border-top: none;
+    margin-bottom: 25px;
+
+    @media (max-width: 767px) {
+        &.hide-for-small {
+            display: none;
+        }
+    }
+}
+
+.volunteers {
+
+    div {
+        border-top: solid #ccc 1px;
+        padding: 25px 0;
+
+        @media (max-width: 767px) {           
+            word-wrap: break-word;
+
+            &.hide-for-small {
+                display: none;
+            }
+        }
+    }
+}

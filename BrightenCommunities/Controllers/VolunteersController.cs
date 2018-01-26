@@ -52,8 +52,7 @@ namespace BrightenCommunities.Controllers
             {
                 db.Volunteers.Add(volunteers);
                 db.SaveChanges();
-                ViewBag.Message = "Thank you for your interest in volunteering to help.  We will notify you on our next cleanup event.  Feel free to help out on you own, everything helps.";
-                return RedirectToAction("../Home/Index");
+                return View();
             }
 
             return View(volunteers);
