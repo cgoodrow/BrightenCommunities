@@ -19,7 +19,7 @@ namespace BrightenCommunities.Controllers
 
         public ActionResult _BlogCreatePartial()
         {
-            return View(); 
+            return View();
         }
 
         [HttpPost]
@@ -32,15 +32,15 @@ namespace BrightenCommunities.Controllers
                 db.SaveChanges();
                 ModelState.Clear(); //clears model state in form.
                 Response.Redirect(Request.Url.AbsolutePath); //redirects page to index page, prevents double submissions on page refresh.
-                
+
                 return View();
             }
-           
-            return View(blogs);           
+
+            return View(blogs);
         }
 
         public ActionResult Index()
-        {          
+        {
             return View();
         }
 
@@ -56,6 +56,39 @@ namespace BrightenCommunities.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }       
+        }
+
+        public ActionResult Volunteers()
+        {
+            return View();
+        }
+
+        public ActionResult _VolunteersPartial()
+        {
+            return PartialView(db.Volunteers.ToList());
+        }
+
+        public ActionResult _VolunteersCreatePartial()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult _VolunteersCreatePartial([Bind(Include = "Id,Name,Email,Phone")] Volunteers volunteers)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Volunteers.Add(volunteers);
+                db.SaveChanges();
+                ModelState.Clear();
+
+                Response.Redirect(Request.Url.AbsolutePath); //redirects page to index page, prevents double submissions on page refresh.
+
+                return View();
+            }
+
+            return View(volunteers);
+        }
     }
 }

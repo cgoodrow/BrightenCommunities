@@ -1,0 +1,41 @@
+﻿.offset-right-cherry-blossom {    
+    position: relative; 
+
+    .cherry-blossom {
+        position: absolute;
+        right: -50px;
+        top: -225px;
+        z-index: -1;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.offset-left-tulip {
+    position: relative;
+
+    .tulip {
+        position: absolute;
+        left: -142px;
+        top: 0;
+        z-index: -1;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &.volunteers-img {
+            top: -210px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

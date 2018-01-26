@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BrightenCommunities.Models.Volunteers>
+
+@{ Layout = null;}
+
+
+<div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 volunteers-label text-center">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 volunteers-label text-center">
+        @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 hide-for-small volunteers-label text-center">
+        @Html.DisplayNameFor(model => model.Phone)
+    </div>
+</div>
+<div class="row volunteers">
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4 text-center">
+            @Html.DisplayFor(modelItem => item.Name)
+
+        </div>
+        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-4 text-center">
+            @Html.DisplayFor(modelItem => item.Email)
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-4 hide-for-small text-center">
+            @Html.DisplayFor(modelItem => item.Phone)
+        </div>}
+</div>
+
+
