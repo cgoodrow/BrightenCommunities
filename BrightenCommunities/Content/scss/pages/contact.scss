@@ -1,0 +1,27 @@
+﻿.contact {
+    
+    .form-group {
+
+        .form-control {
+            max-width: 500px;
+        }
+    }
+  }
+
+.contact-message {
+    @media (max-width: 769px) {
+        margin-top: 55px;
+    }
+}
+
+.contactModal {
+
+    .modal-content {
+        padding: 25px;
+
+        .close {
+            margin-top: -25px;
+            margin-right: -14px;
+        }
+    }
+}

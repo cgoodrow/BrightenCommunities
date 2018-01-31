@@ -37,6 +37,10 @@ h2, h3 {
 
 .m-top-25 {
     margin-top: $m-top-25;
+
+    @media (max-width: 1024px) {
+        margin-top: 45px;
+    }
 }
 
 body::-webkit-scrollbar {

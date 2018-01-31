@@ -54,21 +54,21 @@ namespace BrightenCommunities.Controllers
         }
 
         public ActionResult Contact()
-        {  
+        {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(EmailFormModel model)
-        {
+        {            
             if (ModelState.IsValid)
             {
-                var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                var body = "<p>Email From: {0}</p> <p>{1}</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
                 message.To.Add(new MailAddress("goodrow.chris4@gmail.com"));  // replace with valid value 
                 message.From = new MailAddress("goodrow.chris4@gmail.com");  // replace with valid value
-                message.Subject = "Your email subject";
+                message.Subject = "Brightening Communities Contact";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
 
@@ -76,6 +76,7 @@ namespace BrightenCommunities.Controllers
                 {
                     await smtp.SendMailAsync(message);
                     ViewBag.Message = "Message Sent";
+                    ModelState.Clear();
                     return View();
                 }
             }

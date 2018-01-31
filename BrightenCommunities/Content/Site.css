@@ -102,6 +102,9 @@ h2, h3 {
 
 .m-top-25 {
   margin-top: 25px; }
+  @media (max-width: 1024px) {
+    .m-top-25 {
+      margin-top: 45px; } }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -188,6 +191,9 @@ h2, h3 {
 
 .m-top-25 {
   margin-top: 25px; }
+  @media (max-width: 1024px) {
+    .m-top-25 {
+      margin-top: 45px; } }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -336,7 +342,7 @@ footer {
 
 .the-vision {
   margin-top: 25px; }
-  @media (max-width: 480px) {
+  @media (max-width: 769px) {
     .the-vision {
       margin-top: 55px; } }
 
@@ -355,10 +361,12 @@ footer {
   @media (max-width: 480px) {
     .form-horizontal {
       width: 100%; } }
+  .form-horizontal.contact-form {
+    margin: 0 !important; }
 
 .modal-content {
   width: 500px; }
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     .modal-content {
       width: 100%; } }
   .modal-content .close {
@@ -406,6 +414,9 @@ h2, h3 {
 
 .m-top-25 {
   margin-top: 25px; }
+  @media (max-width: 1024px) {
+    .m-top-25 {
+      margin-top: 45px; } }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -427,7 +438,7 @@ body::-webkit-scrollbar-thumb {
   height: auto; }
   .blog div {
     border-top: solid #ccc 1px;
-    padding: 25px 0; }
+    padding: 25px; }
 
 .offset-right-cherry-blossom {
   position: relative; }
@@ -436,6 +447,10 @@ body::-webkit-scrollbar-thumb {
     right: -50px;
     top: -225px;
     z-index: -1; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .offset-right-cherry-blossom .cherry-blossom {
+        padding: 0;
+        right: -24px; } }
     @media (max-width: 767px) {
       .offset-right-cherry-blossom .cherry-blossom {
         display: none; } }
@@ -454,6 +469,8 @@ body::-webkit-scrollbar-thumb {
         display: none; } }
     .offset-left-tulip .tulip.volunteers-img {
       top: -210px; }
+    .offset-left-tulip .tulip.contact-img {
+      top: -200px; }
     .offset-left-tulip .tulip img {
       width: 100%; }
 
@@ -508,6 +525,9 @@ h2, h3 {
 
 .m-top-25 {
   margin-top: 25px; }
+  @media (max-width: 1024px) {
+    .m-top-25 {
+      margin-top: 45px; } }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -536,6 +556,19 @@ body::-webkit-scrollbar-thumb {
       word-wrap: break-word; }
       .volunteers div.hide-for-small {
         display: none; } }
+
+.contact .form-group .form-control {
+  max-width: 500px; }
+
+@media (max-width: 769px) {
+  .contact-message {
+    margin-top: 55px; } }
+
+.contactModal .modal-content {
+  padding: 25px; }
+  .contactModal .modal-content .close {
+    margin-top: -25px;
+    margin-right: -14px; }
 
 body {
   padding-top: 50px; }
