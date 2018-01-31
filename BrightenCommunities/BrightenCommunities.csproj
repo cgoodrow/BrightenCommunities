@@ -322,6 +322,7 @@
     <Content Include="Content\scss\pages\offset-images.scss" />
     <Content Include="Content\scss\pages\volunteers.scss" />
     <Content Include="Content\scss\pages\volunteersPartial.scss" />
+    <Content Include="Content\scss\pages\contact.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

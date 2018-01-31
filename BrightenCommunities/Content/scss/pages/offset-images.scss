@@ -7,6 +7,12 @@
         top: -225px;
         z-index: -1;
 
+        @media (min-width: 768px) and (max-width: 1024px){           
+                padding: 0;
+                right: -24px;
+            
+        }
+
         @media (max-width: 767px) {
             display: none;
         }
@@ -32,6 +38,10 @@
 
         &.volunteers-img {
             top: -210px;
+        }
+
+        &.contact-img {
+            top: -200px;
         }
 
         img {
