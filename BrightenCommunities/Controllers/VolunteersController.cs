@@ -15,12 +15,14 @@ namespace BrightenCommunities.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Volunteers
+        [Authorize(Roles = "Administrator")]
         public ActionResult Index()
         {
             return View(db.Volunteers.ToList());
         }
 
         // GET: Volunteers/Details/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Volunteers/Create
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +62,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Volunteers/Edit/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +80,7 @@ namespace BrightenCommunities.Controllers
         // POST: Volunteers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,Email,Phone")] Volunteers volunteers)
@@ -90,6 +95,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Volunteers/Delete/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,6 +111,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // POST: Volunteers/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -15,12 +15,14 @@ namespace BrightenCommunities.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Blogs
+        [Authorize(Roles = "Administrator")]
         public ActionResult Index()
         {
             return View(db.Blogs.ToList());
         }
 
         // GET: Blogs/Details/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Blogs/Create
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace BrightenCommunities.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create([Bind(Include = "Id,UserName,Post")] Blogs blogs)
         {
             if (ModelState.IsValid)
@@ -59,6 +63,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Blogs/Edit/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +83,7 @@ namespace BrightenCommunities.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit([Bind(Include = "Id,UserName,Post")] Blogs blogs)
         {
             if (ModelState.IsValid)
@@ -90,6 +96,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // GET: Blogs/Delete/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,6 +112,7 @@ namespace BrightenCommunities.Controllers
         }
 
         // POST: Blogs/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

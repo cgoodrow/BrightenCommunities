@@ -25,6 +25,7 @@
 
 .offset-left-tulip {
     position: relative;
+    z-index: -1;
 
     .tulip {
         position: absolute;

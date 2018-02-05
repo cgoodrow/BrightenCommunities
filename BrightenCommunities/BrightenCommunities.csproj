@@ -323,6 +323,7 @@
     <Content Include="Content\scss\pages\volunteers.scss" />
     <Content Include="Content\scss\pages\volunteersPartial.scss" />
     <Content Include="Content\scss\pages\contact.scss" />
+    <Content Include="Content\scss\pages\about.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -395,6 +396,9 @@
     <Content Include="Views\Home\Volunteers.cshtml" />
     <Content Include="Views\Shared\_VolunteersPartial.cshtml" />
     <Content Include="Views\Shared\_VolunteersCreatePartial.cshtml" />
+    <Content Include="Views\Shared\_ContactPartial.cshtml" />
+    <Content Include="Views\Shared\_ModalPartial.cshtml" />
+    <Content Include="Views\Shared\_DonatePartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

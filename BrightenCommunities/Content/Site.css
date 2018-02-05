@@ -42,7 +42,7 @@
       right: 13%; } }
   @media (max-width: 480px) {
     #header .banner-text {
-      right: -1.5%;
+      padding: 0;
       margin-top: 45px; } }
   #header .banner-text h1 {
     font-size: 72px;
@@ -89,7 +89,7 @@
 .relative {
   position: relative; }
 
-h2, h3 {
+h2, h3, h4 {
   font-size: 52px;
   font-family: "amatic_scregular"; }
 
@@ -105,6 +105,9 @@ h2, h3 {
   @media (max-width: 1024px) {
     .m-top-25 {
       margin-top: 45px; } }
+
+.admin {
+  margin-top: 100px; }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -178,7 +181,7 @@ body::-webkit-scrollbar-thumb {
 .relative {
   position: relative; }
 
-h2, h3 {
+h2, h3, h4 {
   font-size: 52px;
   font-family: "amatic_scregular"; }
 
@@ -194,6 +197,9 @@ h2, h3 {
   @media (max-width: 1024px) {
     .m-top-25 {
       margin-top: 45px; } }
+
+.admin {
+  margin-top: 100px; }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -216,6 +222,21 @@ nav ul {
       color: #000; }
       nav ul li a:hover {
         color: #000; }
+
+.donate {
+  width: 150px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 0;
+  text-align: left;
+  font-size: 40px; }
+  .donate:hover, .donate:visited, .donate:focus, .donate:active {
+    background-color: transparent;
+    text-decoration: underline;
+    border: 0;
+    outline: none;
+    box-shadow: none; }
 
 .navbar-inverse {
   background-color: transparent;
@@ -401,7 +422,7 @@ footer {
 .relative {
   position: relative; }
 
-h2, h3 {
+h2, h3, h4 {
   font-size: 52px;
   font-family: "amatic_scregular"; }
 
@@ -417,6 +438,9 @@ h2, h3 {
   @media (max-width: 1024px) {
     .m-top-25 {
       margin-top: 45px; } }
+
+.admin {
+  margin-top: 100px; }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -458,7 +482,8 @@ body::-webkit-scrollbar-thumb {
       width: 100%; }
 
 .offset-left-tulip {
-  position: relative; }
+  position: relative;
+  z-index: -1; }
   .offset-left-tulip .tulip {
     position: absolute;
     left: -142px;
@@ -512,7 +537,7 @@ body::-webkit-scrollbar-thumb {
 .relative {
   position: relative; }
 
-h2, h3 {
+h2, h3, h4 {
   font-size: 52px;
   font-family: "amatic_scregular"; }
 
@@ -528,6 +553,9 @@ h2, h3 {
   @media (max-width: 1024px) {
     .m-top-25 {
       margin-top: 45px; } }
+
+.admin {
+  margin-top: 100px; }
 
 body::-webkit-scrollbar {
   width: 1em; }
@@ -557,8 +585,15 @@ body::-webkit-scrollbar-thumb {
       .volunteers div.hide-for-small {
         display: none; } }
 
-.contact .form-group .form-control {
-  max-width: 500px; }
+.contact {
+  margin-top: 50px; }
+  .contact .form-group .form-control {
+    max-width: 630px; }
+  .contact .form-group .btn-default {
+    width: 100%;
+    max-width: 100px; }
+  .contact .form-group textarea {
+    height: 100px; }
 
 @media (max-width: 769px) {
   .contact-message {
@@ -569,6 +604,57 @@ body::-webkit-scrollbar-thumb {
   .contactModal .modal-content .close {
     margin-top: -25px;
     margin-right: -14px; }
+
+.bubbles .bubble {
+  position: relative;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 280px;
+  width: 280px;
+  cursor: pointer; }
+  @media (max-width: 768px) {
+    .bubbles .bubble {
+      height: 30vw;
+      width: 30vw; } }
+  .bubbles .bubble.yellow {
+    background-color: #ffdd00; }
+  .bubbles .bubble.blue {
+    background-color: #a0c8eb; }
+  .bubbles .bubble.green {
+    background-color: #96d236; }
+  .bubbles .bubble:hover p {
+    display: block; }
+  .bubbles .bubble:hover h4 {
+    display: none; }
+  .bubbles .bubble h4 {
+    position: absolute;
+    top: 38%;
+    left: 13%; }
+    @media (max-width: 1024px) {
+      .bubbles .bubble h4 {
+        font-size: 5vw; } }
+    @media (max-width: 767px) {
+      .bubbles .bubble h4 {
+        top: 35%;
+        left: 17%; } }
+  .bubbles .bubble p {
+    position: absolute;
+    top: 25%;
+    right: 3%;
+    width: 240px;
+    display: none; }
+    @media (max-width: 1024px) {
+      .bubbles .bubble p {
+        width: 22vw;
+        top: 16%;
+        font-size: 2vw; } }
+    @media (max-width: 767px) {
+      .bubbles .bubble p {
+        right: 6%; } }
+
+@media (max-width: 480px) {
+  .bubbles .col-xs-4 {
+    padding: 0; } }
 
 body {
   padding-top: 50px; }

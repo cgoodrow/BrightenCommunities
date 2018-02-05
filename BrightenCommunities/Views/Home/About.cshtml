@@ -1,7 +1,43 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About Us";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<section class="about m-top-25">
+    <div class="row">
+        <div class="col-lg-10 col-centered">
+            <h2 class="text-center">@ViewBag.Title</h2>
+            <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bubbles m-top-25">
+    <div class="row">
+        <div class="col-xs-12 col-lg-10 col-centered">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="bubble yellow">
+                    <h4 class="text-center">Responsibility</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="bubble blue">
+                    <h4 class="text-center">Accountability</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="bubble green">
+                    <h4 class="text-center">Enviromental</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    @Html.Partial("_ContactPartial")
+</section>
+
+@Html.Partial("_ModalPartial")
