@@ -1,9 +1,20 @@
-﻿.contact {
+﻿
+.contact {
+    margin-top: 50px;
     
     .form-group {
 
         .form-control {
-            max-width: 500px;
+            max-width: 630px;
+        }
+
+        .btn-default {
+            width: 100%;
+            max-width: 100px;
+        }
+
+        textarea {
+            height: 100px;
         }
     }
   }
@@ -25,3 +36,4 @@
         }
     }
 }
+

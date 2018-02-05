@@ -47,8 +47,7 @@ namespace BrightenCommunities.Controllers
         }
 
         public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        {            
 
             return View();
         }
@@ -56,7 +55,7 @@ namespace BrightenCommunities.Controllers
         public ActionResult Contact()
         {
             return View();
-        }
+        }       
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -73,7 +72,7 @@ namespace BrightenCommunities.Controllers
                 message.IsBodyHtml = true;
 
                 using (var smtp = new SmtpClient())
-                {
+                {                    
                     await smtp.SendMailAsync(message);
                     ViewBag.Message = "Message Sent";
                     ModelState.Clear();

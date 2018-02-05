@@ -13,6 +13,18 @@
             width: 30vw;
         }
 
+        &.yellow {
+            background-color: #ffdd00;
+        }
+
+        &.blue {
+            background-color: #a0c8eb;
+        }
+
+        &.green {
+            background-color: #96d236;
+        }
+
 
         &:hover p {
             display: block;

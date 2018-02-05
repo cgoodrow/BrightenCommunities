@@ -20,9 +20,12 @@
                     @if (User.IsInRole("Administrator"))
         {
             <li>@Html.ActionLink("Administration", "Index", "Admin")</li>
+            <li>@Html.ActionLink("Blogs", "Index", "Blogs")</li>
+            <li>@Html.ActionLink("Volunteers Admin", "Index" ,"Volunteers")</li>            
 }
                 </ul>
                 @Html.Partial("_LoginPartial")
+                @Html.Partial("_DonatePartial")
             </nav>
         </div>
     </div>

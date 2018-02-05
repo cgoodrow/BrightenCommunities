@@ -396,6 +396,9 @@
     <Content Include="Views\Home\Volunteers.cshtml" />
     <Content Include="Views\Shared\_VolunteersPartial.cshtml" />
     <Content Include="Views\Shared\_VolunteersCreatePartial.cshtml" />
+    <Content Include="Views\Shared\_ContactPartial.cshtml" />
+    <Content Include="Views\Shared\_ModalPartial.cshtml" />
+    <Content Include="Views\Shared\_DonatePartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
