@@ -1,0 +1,64 @@
+﻿.bubbles {
+
+    .bubble {
+        position: relative;
+        border: solid 1px rgba(0,0,0,.5);
+        border-radius: 50%;
+        height: 280px;
+        width: 280px;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            height: 30vw;
+            width: 30vw;
+        }
+
+
+        &:hover p {
+            display: block;
+        }
+
+        &:hover h4 {
+            display: none;
+        }
+
+        h4 {
+            position: absolute;
+            top: 38%;
+            left: 13%;
+
+            @media (max-width: 1024px) {
+                font-size: 5vw;
+            }
+
+            @media (max-width: 767px) {
+                top: 35%;
+                left: 17%;
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 25%;
+            right: 3%;
+            width: 240px;
+            display: none;
+
+            @media (max-width: 1024px) {
+                width: 22vw;
+                top: 16%;
+                font-size: 2vw;
+            }
+
+            @media (max-width: 767px) {
+                right: 6%;
+            }
+        }
+    }
+
+    .col-xs-4 {
+        @media (max-width: 480px) {
+            padding: 0;
+        }
+    }
+}
